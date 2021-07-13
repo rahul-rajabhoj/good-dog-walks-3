@@ -11,6 +11,8 @@ function CreateAccountViewModel() {
         required: true,
     });
 
+    self.subscriptionType = ko.observable('standard');
+
     self.handleSubmit = function() {
 
         var errors = ko.validation.group(self);
@@ -26,6 +28,7 @@ function CreateAccountViewModel() {
         var payload = {
             firstName: self.firstName(),
             email: self.emailAddress(),
+            subscription: self.subscriptionType(),
         }
 
         console.log(payload);
