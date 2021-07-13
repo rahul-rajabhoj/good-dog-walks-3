@@ -3,11 +3,15 @@ function CreateAccountViewModel() {
 
     self.firstName = ko.observable('').extend({
         validation: {
-            message: 'Please enter at least 2 characters',
+            message: 'This is not good enough',
             validator: function(value) {
                 return value.length > 1
             }
         }
+    });
+
+    self.emailAddress = ko.observable('').extend({
+        email: true,
     });
 
     self.handleSubmit = function() {
