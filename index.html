@@ -25,10 +25,10 @@
             <div class="card-section">
                <h2>Create Account</h2>
                <p>Enter your name and details to get that tail wagging</p>
-               <form>
+               <form data-bind="submit: handleSubmit">
                   <div class="field">
                      <label for="first-name">First Name*</label>
-                     <input id="first-name" type="text" />
+                     <input data-bind="value: firstName" id="first-name" type="text" />
                   </div>
                   <div class="field">
                      <label for="email">Email Address*</label>
