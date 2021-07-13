@@ -13,6 +13,8 @@ function CreateAccountViewModel() {
 
     self.subscriptionType = ko.observable('standard');
 
+    self.hasBeenSubmitted = ko.observable(false);
+
     self.handleSubmit = function() {
 
         var errors = ko.validation.group(self);
@@ -32,6 +34,8 @@ function CreateAccountViewModel() {
         }
 
         console.log(payload);
+
+        self.hasBeenSubmitted(true);
     }
 }
 

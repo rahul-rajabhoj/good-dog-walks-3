@@ -17,12 +17,12 @@
                Good Dog Walks 3 Inc.
             </header>
             
-            <div class="card-section" style="display:none;">
+            <div class="card-section" data-bind="visible: hasBeenSubmitted()">
                <h2>Thank you for submitting the form!</h2>
                <p>Please check your email for a confirmation link.</p>
             </div>
             
-            <div class="card-section">
+            <div class="card-section" data-bind="visible: !hasBeenSubmitted()">
                <h2>Create Account</h2>
                <p>Enter your name and details to get that tail wagging</p>
                <form data-bind="submit: handleSubmit">
